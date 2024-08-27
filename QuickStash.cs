@@ -119,7 +119,7 @@ public class QuickStash : IMod
 			InventoryHandler chestInventoryHandler = _chestComponent.inventoryHandler;
 			if (chestInventoryHandler != null)
 			{
-				pl.playerInventoryHandler.QuickStack(chestInventoryHandler);
+				pl.playerInventoryHandler.QuickStack(pl, chestInventoryHandler);
 				chestCount++;
 			}
 		}
@@ -169,7 +169,7 @@ public class QuickStash : IMod
 			InventoryHandler chestInventoryHandler = _chestComponent.inventoryHandler;
 			if (chestInventoryHandler != null)
 			{
-				chestInventoryHandler.QuickStack(pl.playerInventoryHandler);
+				chestInventoryHandler.QuickStack(pl, pl.playerInventoryHandler);
 				chestCount++;
 			}
 		}
